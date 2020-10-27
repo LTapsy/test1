@@ -43,7 +43,9 @@ function test(){
         scrollTop.id = "opacity-show";
     }
 
-    
+    if(pageYOffset == 190){
+        makeVideo();
+    }
 
     var x = window.matchMedia("(max-width: 700px)")
     myFunction(x) 
@@ -51,6 +53,17 @@ function test(){
     
 }
 
+
+function makeVideo(){
+    var html = '';
+    html=html+'<video width="400" controls preload="none" muted autoplay>';
+    html=html+'    <source src="vid/tulu_vid.mp4" type="video/mp4">';
+    html=html+'    Your browser does not support HTML video.';
+    html=html+'</video>';
+
+	$("#vid").empty();
+	$("#vid").append(html);
+}
 
 
 var menuToggle = "off";
