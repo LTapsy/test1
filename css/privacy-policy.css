@@ -225,7 +225,7 @@ footer p{
     }
 
     nav{
-        background:#113448;
+        background:#113448 !important;
         position: fixed;
         z-index: 1;
     }
