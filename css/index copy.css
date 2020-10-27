@@ -131,6 +131,19 @@ button{
     justify-content: center !important;
 }
 
+/* Video */
+
+.vid{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:40vh;
+}
+
+.vid video{
+    width:70vw;
+}
+
 /* AUTO EXP */
 
 .autoExp{

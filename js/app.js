@@ -3,16 +3,23 @@ var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
 const nav = document.querySelector('nav');
 const scrollTop = document.querySelector('.scrollBtn');
 const links = document.querySelector('nav .links');
+const video = document.querySelector('.vid video');
 
 
 
 function test(){
-
+    console.log(pageYOffset);
     function myFunction(x) {
         if (x.matches) { 
             nav.className = "nav-solid";
+
+            if(pageYOffset>200){
+                video.play();
+            }else if(pageYOffset<200){
+                video.pause();
+            }
         } else {
-            console.log(pageYOffset);
+            // console.log(pageYOffset);
             if(pageYOffset==0){
                 nav.className = "nav-transparent";
                 scrollTop.id = "opacity-hide";
@@ -20,6 +27,12 @@ function test(){
             else if(pageYOffset>20){
                 nav.className = "nav-solid";
                 scrollTop.id = "opacity-show";
+            }
+
+            if(pageYOffset>600){
+                video.play();
+            }else if(pageYOffset<600){
+                video.pause();
             }
         }
     }
@@ -29,6 +42,9 @@ function test(){
     else if(pageYOffset>20){
         scrollTop.id = "opacity-show";
     }
+
+    
+
     var x = window.matchMedia("(max-width: 700px)")
     myFunction(x) 
     x.addListener(myFunction) //
