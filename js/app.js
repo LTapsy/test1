@@ -13,11 +13,11 @@ function test(){
         if (x.matches) { 
             nav.className = "nav-solid";
 
-            if(pageYOffset>200){
-                video.play();
-            }else if(pageYOffset<200){
-                video.pause();
-            }
+            // if(pageYOffset>200){
+            //     video.play();
+            // }else if(pageYOffset<200){
+            //     video.pause();
+            // }
         } else {
             // console.log(pageYOffset);
             if(pageYOffset==0){
@@ -29,11 +29,11 @@ function test(){
                 scrollTop.id = "opacity-show";
             }
 
-            if(pageYOffset>600){
-                video.play();
-            }else if(pageYOffset<600){
-                video.pause();
-            }
+            // if(pageYOffset>600){
+            //     video.play();
+            // }else if(pageYOffset<600){
+            //     video.pause();
+            // }
         }
     }
     if(pageYOffset==0){
@@ -43,7 +43,7 @@ function test(){
         scrollTop.id = "opacity-show";
     }
 
-    if(pageYOffset == 190){
+    if(pageYOffset < 190){
         makeVideo();
     }
 
