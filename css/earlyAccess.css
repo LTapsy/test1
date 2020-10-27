@@ -1,0 +1,235 @@
+@font-face {
+    font-family: OpenSansLight;
+    src: url(../fonts/OpenSans-Light.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: OpenSansBold;
+    src: url(../fonts/OpenSans-Bold.ttf);
+    font-display: swap;
+}
+
+.show-desktop{
+    display:flex;
+}
+
+.show-mobile{
+    display:none;
+}
+
+#menuBtn{
+    display:none;
+}
+
+/* NAV */
+
+nav{
+    flex-direction: row;
+    background:#113448;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: fixed;
+    width:100%;
+    z-index:1;
+}
+
+.nav-transparent{
+    background:#11344805;
+    transition: 0.2s;
+}
+
+.nav-solid{
+    background:#113448;
+    transition: 0.2s;
+}
+
+.logo{
+    margin:25px 0 25px 80px;
+}
+
+.logo .tuluCanada{
+    width:250px;
+}
+
+.logo .tuluLogo{
+    width:60px;
+}
+
+.links{
+    flex-direction: row;
+}
+
+.navigationList{
+    flex-direction: row;
+    width:500px;
+    justify-content: space-evenly;
+}
+
+.navigationLink{
+    color:white;
+    margin:25px 0 25px 0;
+    font-size:14px;
+}
+
+.navigationLink:hover{
+    color:#14bf98;
+    transition: 0.2s;
+}
+
+.earlyAccess{
+    color:#14bf98;
+    font-size:14px;
+    margin:25px 80px 25px 0;
+}
+
+/* HEADER */
+
+header{
+    height:100vh !important;
+    display:flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.text-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p-heading{
+    width:80vmin;
+    text-align: center;
+    color:white;
+}
+
+
+form{
+    width:80vmin !important;
+    margin-top:30px;
+}
+
+button{
+    text-align: center !important;
+    display:flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.checkbox{
+    color:#787976;
+    display:flex !important;
+    flex-direction: column !important;
+}
+
+.checkbox p{
+    color:#787976;
+}
+
+.checkBoxContainer{
+    color:#787976;
+    display:flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    .show-desktop{
+        display:none;
+    }
+    
+    .show-mobile{
+        display:Flex;
+    }
+
+    nav{
+        background:#113448 !important;
+        position: fixed;
+        z-index: 1;
+    }
+
+    .logo{
+        margin:15px 15px;
+        z-index: 1;
+    }
+
+    #menuBtn{
+        display:flex;
+
+    }
+
+    .links{
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+
+    .links i{
+        margin: 0 15px;
+        color:white;
+    }
+
+    .navigationList{
+        top:60px;
+        position: absolute;
+        flex-direction: column;
+        background:#113448;
+        width:100%;
+        height:0px;
+        justify-content: unset;
+        padding:0px 0 0px 0;
+        z-index:-2;
+        overflow: hidden;
+    }
+
+    .navigationListItem{
+        z-index: -2;
+    }
+
+    .navigationLink{
+        z-index: -1;
+        color:white;
+        margin:10px 25px;
+        font-size:14px;
+    }
+
+    .navigationLink:hover{
+        color:#14bf98;
+        transition: 0.2s;
+    }
+
+    header{
+        height:100vh !important;
+        display:flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    form{
+        width:90vmin !important;
+    }
+
+
+    .earlyAccess{
+        margin:25px 0;
+    }
+
+    
+    .checkbox{
+        color:#787976;
+        display:flex !important;
+        flex-direction: column !important;
+    }
+
+    .checkBoxContainer{
+        color:#787976;
+        display:flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center;
+    }
+}
+
